@@ -95,3 +95,10 @@ increase (for the provided Source APIs we could also have created a Sport and a 
 This was my first time using SpringBoot and writing UnitTests, and I'm eager to continue learning and improving my skills 
 in software development. I'm excited to explore new technologies and techniques to build even better projects in the future.
 
+<hr>
+
+### TODOs 
+
+- Implement Caching -> Possible Redis; adding the @Cacheable annotation on-top of the function; Can check all the keys 
+that are currently stored in cache; 
+- Creating a Docker image so the project runs the same on every machine inside a container; Creating the Dockerfile and building the docker image
