@@ -4,8 +4,8 @@ import com.sportsradar.sportsServiceApi.controllers.IMatchController;
 import com.sportsradar.sportsServiceApi.enums.StatusType;
 import com.sportsradar.sportsServiceApi.modules.Match;
 import com.sportsradar.sportsServiceApi.services.MatchService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class MatchController implements IMatchController {
             }
 
         } catch (Exception e) {
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
@@ -47,7 +47,7 @@ public class MatchController implements IMatchController {
             }
 
         } catch (Exception e) {
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
@@ -63,7 +63,7 @@ public class MatchController implements IMatchController {
             }
 
         } catch (Exception e) {
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
@@ -79,7 +79,7 @@ public class MatchController implements IMatchController {
             }
 
         } catch (Exception e) {
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 }
