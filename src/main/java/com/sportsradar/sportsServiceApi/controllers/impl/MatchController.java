@@ -4,6 +4,7 @@ import com.sportsradar.sportsServiceApi.controllers.IMatchController;
 import com.sportsradar.sportsServiceApi.enums.StatusType;
 import com.sportsradar.sportsServiceApi.modules.Match;
 import com.sportsradar.sportsServiceApi.services.MatchService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@Tag(name = "Match Controller", description = "Endpoints for managing matches")
 public class MatchController implements IMatchController {
 
     private final MatchService matchService;
