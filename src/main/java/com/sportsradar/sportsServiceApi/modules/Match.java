@@ -36,8 +36,21 @@ public class Match {
         private int home_score;
         private int away_score;
 
+        public MatchBuilder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
         public MatchBuilder setStatusType(StatusType status) {
             this.status = status;
+            return this;
+        }
+        public MatchBuilder setHomeTeam(String home_team) {
+            this.home_team = home_team;
+            return this;
+        }
+        public MatchBuilder setAwayTeam(String away_team) {
+            this.away_team = away_team;
             return this;
         }
 

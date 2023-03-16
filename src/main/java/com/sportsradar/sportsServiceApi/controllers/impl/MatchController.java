@@ -5,6 +5,7 @@ import com.sportsradar.sportsServiceApi.enums.StatusType;
 import com.sportsradar.sportsServiceApi.modules.Match;
 import com.sportsradar.sportsServiceApi.services.MatchService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -54,6 +55,22 @@ public class MatchController implements IMatchController {
     public ResponseEntity<List<Match>> getAllMatches() {
         try {
             List<Match> matchList = matchService.getAllMatchesByStatus();
+
+            if (matchList != null) {
+                return ResponseEntity.ok(matchList);
+            } else {
+                return ResponseEntity.noContent().build();
+            }
+
+        } catch (Exception e) {
+            return ResponseEntity.noContent().build();
+        }
+    }
+
+    @Override
+    public ResponseEntity<List<Match>> getAllMatchesByTeamName(String name) {
+        try {
+            List<Match> matchList = matchService.getAllMatchesByTeamName(name);
 
             if (matchList != null) {
                 return ResponseEntity.ok(matchList);
