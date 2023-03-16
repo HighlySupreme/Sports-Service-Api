@@ -44,8 +44,10 @@ public class MatchServiceTest {
         when(restTemplate.getForObject(apiUrl, Match[].class)).thenReturn(mockMatches);
 
         List<Match> completedMatches = matchService.getAllMatchesByStatus(StatusType.COMPLETED);
+        List<Match> liveMatches = matchService.getAllMatchesByStatus(StatusType.Live);
 
         Assertions.assertEquals(4, completedMatches.size());
+        Assertions.assertEquals(1, liveMatches.size());
 
     }
 

@@ -12,6 +12,8 @@ public interface IMatchController {
 
     @GetMapping("/completed")
     ResponseEntity<List<Match>> getAllCompletedMatches();
+    @GetMapping("/live")
+    ResponseEntity<List<Match>> getAllLiveMatches();
 
 
 }
