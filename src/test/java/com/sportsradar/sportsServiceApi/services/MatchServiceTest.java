@@ -49,7 +49,7 @@ public class MatchServiceTest {
 
         Assertions.assertEquals(4, completedMatches.size());
         Assertions.assertEquals(1, liveMatches.size());
-        Assertions.assertEquals(6, liveMatches.size());
+        Assertions.assertEquals(6, allMatches.size());
 
     }
 
