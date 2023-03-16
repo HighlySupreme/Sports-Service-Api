@@ -18,6 +18,16 @@ public class MatchService {
 
     /**
     *
+    * Function returns all matches from the /match/all uri
+    *
+    * @return List<Match>
+    */
+    public List<Match> getAllMatchesByStatus() {
+        return getAllMatchesByStatus(null);
+    }
+
+    /**
+    *
     * Function returns all matches from the /match/all uri by status;
     * If no status is passed the function returns all matches.
     *

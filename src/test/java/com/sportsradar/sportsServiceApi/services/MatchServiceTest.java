@@ -45,9 +45,11 @@ public class MatchServiceTest {
 
         List<Match> completedMatches = matchService.getAllMatchesByStatus(StatusType.COMPLETED);
         List<Match> liveMatches = matchService.getAllMatchesByStatus(StatusType.Live);
+        List<Match> allMatches = matchService.getAllMatchesByStatus();
 
         Assertions.assertEquals(4, completedMatches.size());
         Assertions.assertEquals(1, liveMatches.size());
+        Assertions.assertEquals(6, liveMatches.size());
 
     }
 

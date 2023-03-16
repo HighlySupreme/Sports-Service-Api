@@ -49,4 +49,20 @@ public class MatchController implements IMatchController {
             return ResponseEntity.noContent().build();
         }
     }
+
+    @Override
+    public ResponseEntity<List<Match>> getAllMatches() {
+        try {
+            List<Match> matchList = matchService.getAllMatchesByStatus();
+
+            if (matchList != null) {
+                return ResponseEntity.ok(matchList);
+            } else {
+                return ResponseEntity.noContent().build();
+            }
+
+        } catch (Exception e) {
+            return ResponseEntity.noContent().build();
+        }
+    }
 }
