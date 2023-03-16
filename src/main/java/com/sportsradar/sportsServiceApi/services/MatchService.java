@@ -3,6 +3,7 @@ package com.sportsradar.sportsServiceApi.services;
 import com.sportsradar.sportsServiceApi.enums.StatusType;
 import com.sportsradar.sportsServiceApi.modules.Match;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.client.RestTemplate;
