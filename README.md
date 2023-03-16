@@ -19,11 +19,18 @@
 - **Path:**  /api/${api.version}/match/live
 - **Description:** Returns a list of all matches with status live.
 
-### Get All  Matches 
+### Get All Matches 
 
 - **Request Method:** GET 
 - **Path:**  /api/${api.version}/match/all
 - **Description:** Returns a list of all matches.
+
+### Get All Matches By team name
+
+- **Request Method:** GET 
+- **Path:**  /api/${api.version}/match
+- **PathParam:** name
+- **Description:** Returns a list of all matches filtered by team name.
 
 <hr>
 ## Technologies
