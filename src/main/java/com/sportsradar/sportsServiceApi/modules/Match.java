@@ -18,6 +18,34 @@ public class Match {
     private int home_score;
     private int away_score;
 
+    public Match() {
+
+    }
+
+    private Match(MatchBuilder builder) {
+        status = builder.status;
+    }
+
+    public static class MatchBuilder {
+        private int id;
+        private int tournamentId;
+        private Date start_time;
+        private StatusType status;
+        private String home_team;
+        private String away_team;
+        private int home_score;
+        private int away_score;
+
+        public MatchBuilder setStatusType(StatusType status) {
+            this.status = status;
+            return this;
+        }
+
+        public Match build() {
+            return new Match(this);
+        }
+    }
+
 
     public int getId() {
         return id;
