@@ -1,9 +1,15 @@
 # SportsService API
 <hr>
 
+This API provides access to information about sports matches, including completed and live matches, and enables filtering by team name.
+
 ## Features
 
-<hr>
+- Get a list of all completed matches
+- Get a list of all live matches
+- Get a list of all matches
+- Get a list of all matches filtered by team name
+
 
 ## API Endpoints
 
@@ -32,13 +38,17 @@
 - **PathParam:** name
 - **Description:** Returns a list of all matches filtered by team name.
 
-<hr>
+
 ## Technologies
 
 The following technologies are used in this project:
 - #### Java 17
 - #### Spring Boot
 - #### Maven
+
+## API Documentation
+
+API documentation is available through Swagger UI. To access the API documentation, please navigate to {{host}}/swagger-ui.html after starting the application.
 
 
 
